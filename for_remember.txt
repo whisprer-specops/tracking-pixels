@@ -1,1 +1,19 @@
-<img src="https://mail.whispr.dev/home/wofl/track/test-cool-thing" width="1" height="1" style="display:none" alt="">
+`<img src="https://tracker.whispr.dev/track/some-unique-id" width="1" height="1" style="display:none" alt="">`
+
+
+```
+pm2 stop pixel-tracker
+pm2 start pixel-tracker
+```
+
+i.c.e.:
+```
+ps aux | grep flask
+kill <pid>
+```
+
+
+there are no firewall ports open for `5550` open cos caddy's handling it through `80/443` with SSL.
+but, this means there's an entry in `Caddyfile` at bottom for reverse proxied `0.0.0.0:5550` local host all.
+
+
